@@ -1,20 +1,15 @@
 const { Router } = require("express");
 const axios = require("axios");
+const moment = require('moment');
 
 const router = Router();
 
 function getTodaysDate() {
-  let today = new Date();
-  let dd = today.getDate();
-  let mm = today.getMonth() + 1; //January is 0!
-  let yyyy = today.getFullYear();
-  if (dd < 10) {
-    dd = "0" + dd;
-  }
-  if (mm < 10) {
-    mm = "0" + mm;
-  }
-  today = yyyy + mm + dd;
+  let month = moment().utcOffset("-05:00").format("MM");
+  let day = moment().utcOffset("-05:00").format("DD");
+  let year = moment().utcOffset("-05:00").format("YYYY");
+  today = year + month+ day;
+  console.log(today);
   return today;
 }
 let games = [];
