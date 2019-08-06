@@ -19,7 +19,7 @@ function getDailyOdds() {
     method: "get",
     url: `https://api.mysportsfeeds.com/v2.1/pull/mlb/2019-regular/date/${this.getTodaysDate()}/odds_gamelines.json`,
     auth: {
-      username: "1c2e4848-add2-4993-a584-2bf789",
+      username: "3740dd52-6108-4ef0-b3d8-c79dc1",
       password: "MYSPORTSFEEDS"
     }
   }).then(function(response) {
@@ -108,7 +108,7 @@ function getStandings(teamId, game, team) {
     method: "get",
     url: `https://api.mysportsfeeds.com/v2.1/pull/mlb/2019-regular/team_stats_totals.json?team=${teamId}`,
     auth: {
-      username: "1c2e4848-add2-4993-a584-2bf789",
+      username: "3740dd52-6108-4ef0-b3d8-c79dc1",
       password: "MYSPORTSFEEDS"
     }
   })
@@ -142,7 +142,7 @@ function getPitcherStats(game, team, pitcher) {
         "-" +
         pitcher.id}`,
       auth: {
-        username: "1c2e4848-add2-4993-a584-2bf789",
+        username: "3740dd52-6108-4ef0-b3d8-c79dc1",
         password: "MYSPORTSFEEDS"
       }
     })
@@ -195,7 +195,7 @@ router.get("/dailygames", (request, response, next) => {
       `https://api.mysportsfeeds.com/v2.1/pull/mlb/2019-regular/date/${getTodaysDate()}/games.json`,
       {
         auth: {
-          username: "1c2e4848-add2-4993-a584-2bf789",
+          username: "3740dd52-6108-4ef0-b3d8-c79dc1",
           password: "MYSPORTSFEEDS"
         }
       }
@@ -212,7 +212,7 @@ router.get("/dailygames", (request, response, next) => {
             dailyResponse.data.games[i].schedule.homeTeam
               .abbreviation}/lineup.json`,
           auth: {
-            username: "1c2e4848-add2-4993-a584-2bf789",
+            username: "3740dd52-6108-4ef0-b3d8-c79dc1",
             password: "MYSPORTSFEEDS"
           }
         })
