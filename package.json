@@ -23,7 +23,7 @@
     "express": "^4.16.4",
     "moment": "^2.24.0",
     "mysportsfeeds-node": "^2.0.1",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.1",
     "prettier": "^1.18.2"
   }
 }
